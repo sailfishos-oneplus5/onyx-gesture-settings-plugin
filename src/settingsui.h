@@ -15,6 +15,14 @@ public:
     virtual ~SettingsUi();
 
     Q_INVOKABLE void setGesture(QString name, bool enable);
+    Q_INVOKABLE bool getGesture(QString name);
+
+private:
+    bool gestureEnabled(QString name);
+    QMap<QString, bool> enabledGestures;
+    QMap<QString, char> gestureMasks;
+    unsigned char currentMask;
+    void getCurrent();
 };
 
 

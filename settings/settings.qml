@@ -9,6 +9,7 @@ Page
 
     GestureSettings
     {
+        id: gestures
     }
 
     SilicaFlickable
@@ -29,6 +30,35 @@ Page
                 //: page header
                 //% "Gesture settings"
                 title: qsTrId("onyx-gesture-settings-title")
+            }
+
+            TextSwitch
+            {
+                //% "Double tap to wakeup"
+                text: qsTrId("onyx-gesture-double-tap")
+                checked: gestures.getGesture("double_tap")
+                onCheckedChanged: gestures.setGesture("double_tap", checked)
+            }
+            TextSwitch
+            {
+                //% "Flashlight (V)"
+                text: qsTrId("onyx-gesture-flashlight")
+                checked: gestures.getGesture("flashlight")
+                onCheckedChanged: gestures.setGesture("flashlight", checked)
+            }
+            TextSwitch
+            {
+                //% "Music (||, <, >)"
+                text: qsTrId("onyx-gesture-music")
+                checked: gestures.getGesture("music")
+                onCheckedChanged: gestures.setGesture("music", checked)
+            }
+            TextSwitch
+            {
+                //% "Camera (O)"
+                text: qsTrId("onyx-gesture-camera")
+                checked: gestures.getGesture("camera")
+                onCheckedChanged: gestures.setGesture("camera", checked)
             }
         }
     }    
