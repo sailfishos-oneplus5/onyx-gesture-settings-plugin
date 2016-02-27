@@ -1,0 +1,16 @@
+{
+    "translation_catalog": "onyx-gesture-settings",
+    "entries": [
+    {
+        "path": "system_settings/look_and_feel/onyx-gesture-settings",
+        "title": "Sleepmode gestures",
+        "translation_id": "onyx-gesture-settings-title",
+        "type": "page",
+        "icon": "image://theme/icon-m-gesture",
+        "order": 401,
+        "params": {
+            "source": "/usr/share/jolla-settings/pages/onyx-gesture-settings/settings.qml"
+         }
+    }
+    ]
+}
