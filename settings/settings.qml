@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import org.nemomobile.configuration 1.0
 import com.kimmoli.onyxgesturesettings 1.0
 
 Page
@@ -36,39 +35,39 @@ Page
             {
                 //% "Double tap to wakeup"
                 text: qsTrId("onyx-gesture-double-tap")
+                //% "Double tap on the screen to wakeup."
+                description: qsTrId("onyx-gesture-double-tap-description")
                 checked: gestures.getGesture("double_tap")
                 onCheckedChanged: gestures.setGesture("double_tap", checked)
             }
             TextSwitch
             {
-                //% "Flashlight (V)"
+                //% "Flashlight"
                 text: qsTrId("onyx-gesture-flashlight")
+                //% "Turn flashlight on/off by drawing V on the screen."
+                description: qsTrId("onyx-gesture-flashlight-description")
                 checked: gestures.getGesture("flashlight")
                 onCheckedChanged: gestures.setGesture("flashlight", checked)
             }
             TextSwitch
             {
-                //% "Music (||, <, >)"
+                //% "Music controls"
                 text: qsTrId("onyx-gesture-music")
+                //% "Swipe down with two fingers to play or pause music. Draw < or > on the screen for previous or next track."
+                description: qsTrId("onyx-gesture-music-description")
                 checked: gestures.getGesture("music")
                 onCheckedChanged: gestures.setGesture("music", checked)
             }
             TextSwitch
             {
-                //% "Camera (O)"
+                //% "Camera"
                 text: qsTrId("onyx-gesture-camera")
+                //% "Quickly start camera by drawing a circle on the screen."
+                description: qsTrId("onyx-gesture-camera-description")
                 checked: gestures.getGesture("camera")
                 onCheckedChanged: gestures.setGesture("camera", checked)
             }
         }
     }    
-
-    ConfigurationValue
-    {
-        id: onyxgesture_mainswitch
-        key: "/apps/onyxgesture/mainswitch"
-        defaultValue: 1
-    }
-   
 }
 
