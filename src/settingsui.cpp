@@ -18,6 +18,7 @@ SettingsUi::SettingsUi(QObject *parent) :
     /*
      *     UpVee_gesture = (buf[0] & BIT0)?1:0; //"V" -- flashlight
      *     DouSwip_gesture = (buf[0] & BIT1)?1:0;//"||" -- music
+     *     DownVee_gesture = (buf[0] & BIT2)?1:0;//"^" -- voicecall
      *     LeftVee_gesture = (buf[0] & BIT3)?1:0; //">" -- music
      *     RightVee_gesture = (buf[0] & BIT4)?1:0;//"<" -- music
      *     Circle_gesture = (buf[0] & BIT6)?1:0; //"O" -- camera
@@ -27,6 +28,7 @@ SettingsUi::SettingsUi(QObject *parent) :
     gestureMasks.insert("music",0x1A);
     gestureMasks.insert("flashlight", 0x01);
     gestureMasks.insert("double_tap", 0x80);
+    gestureMasks.insert("voicecall", 0x04);
 
     getCurrent();
 }

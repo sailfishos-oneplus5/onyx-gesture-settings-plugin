@@ -67,6 +67,15 @@ Page
                 checked: gestures.getGesture("camera")
                 onCheckedChanged: gestures.setGesture("camera", checked)
             }
+            TextSwitch
+            {
+                //% "Voicecall"
+                text: qsTrId("onyx-gesture-voicecall")
+                //% "Go to call history list by drawing Λ on the screen."
+                description: qsTrId("onyx-gesture-voicecall-description")
+                checked: gestures.getGesture("voicecall")
+                onCheckedChanged: gestures.setGesture("voicecall", checked)
+            }
         }
     }    
 }
