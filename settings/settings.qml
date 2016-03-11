@@ -33,7 +33,7 @@ Page
                 text: qsTrId("onyx-gesture-double-tap")
                 //% "Double tap on the screen to wakeup."
                 description: qsTrId("onyx-gesture-double-tap-description")
-                checked: gestures.value.indexOf("double_tap") > -1
+                checked: gestures.get("double_tap")
                 onCheckedChanged: gestures.set("double_tap", checked)
             }
             TextSwitch
@@ -42,7 +42,7 @@ Page
                 text: qsTrId("onyx-gesture-flashlight")
                 //% "Turn flashlight on/off by drawing V on the screen."
                 description: qsTrId("onyx-gesture-flashlight-description")
-                checked: gestures.value.indexOf("flashlight") > -1
+                checked: gestures.get("flashlight")
                 onCheckedChanged: gestures.set("flashlight", checked)
             }
             TextSwitch
@@ -51,7 +51,7 @@ Page
                 text: qsTrId("onyx-gesture-music")
                 //% "Swipe down with two fingers to play or pause music. Draw < or > on the screen for previous or next track."
                 description: qsTrId("onyx-gesture-music-description")
-                checked: gestures.value.indexOf("music") > -1
+                checked: gestures.get("music")
                 onCheckedChanged: gestures.set("music", checked)
             }
             TextSwitch
@@ -60,7 +60,7 @@ Page
                 text: qsTrId("onyx-gesture-camera")
                 //% "Quickly start camera by drawing a circle on the screen."
                 description: qsTrId("onyx-gesture-camera-description")
-                checked: gestures.value.indexOf("camera") > -1
+                checked: gestures.get("camera")
                 onCheckedChanged: gestures.set("camera", checked)
             }
             TextSwitch
@@ -69,7 +69,7 @@ Page
                 text: qsTrId("onyx-gesture-voicecall")
                 //% "Go to call history list by drawing Λ on the screen."
                 description: qsTrId("onyx-gesture-voicecall-description")
-                checked: gestures.value.indexOf("voicecall") > -1
+                checked: gestures.get("voicecall")
                 onCheckedChanged: gestures.set("voicecall", checked)
             }
         }
@@ -84,11 +84,19 @@ Page
         function set(val, state)
         {
             var i = value.indexOf(val)
+            var tmp = value
 
             if (state && i == -1)
-                value.push(val)
+                tmp.push(val)
             else if (!state && i > -1)
-                value.splice(i, 1)
+                tmp.splice(i, 1)
+
+            value = tmp
+        }
+
+        function get(val)
+        {
+            return (gestures.value.indexOf(val) > -1)
         }
     }
 }
