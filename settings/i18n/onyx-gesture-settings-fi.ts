@@ -1,9 +1,8 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="fi" version="2.1">
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE TS><TS language="fi" version="2.1">
 <context>
     <name/>
     <message id="onyx-gesture-settings-title">
-        <source>Gesture settings</source>
-        <extracomment>page header</extracomment>
+        <source>Sleep mode gestures</source>
         <translation>Lepotilan eleet</translation>
     </message>
     <message id="onyx-gesture-double-tap">
@@ -11,40 +10,40 @@
         <translation>Herää kaksoisnapautuksella</translation>
     </message>
     <message id="onyx-gesture-double-tap-description">
-        <source>Double tap on the screen to wakeup.</source>
-        <translation>Napauta ruutua kahdesti herättääksesi laitteen.</translation>
+        <source>Double tap on the screen to wake up from suspend</source>
+        <translation>Napauta ruutua kahdesti herättääksesi laitteen lepotilasta</translation>
     </message>
     <message id="onyx-gesture-flashlight">
-        <source>Flashlight</source>
-        <translation>Taskulamppu</translation>
+        <source>Flashlight toggle</source>
+        <translation>Taskulampun katkaisin</translation>
     </message>
     <message id="onyx-gesture-flashlight-description">
-        <source>Turn flashlight on/off by drawing V on the screen.</source>
-        <translation>Piirrä näyttöö V sytyttääksesi tai sammuttaaksesi kameran valon.</translation>
+        <source>Toggle flashlight on/off by drawing a &apos;V&apos; on the screen</source>
+        <translation>Piirrä &apos;V&apos; sytyttääksesi/sammuttaaksesi kameran valon</translation>
     </message>
     <message id="onyx-gesture-music">
         <source>Music controls</source>
-        <translation>Musiikin ohjaukset</translation>
+        <translation>Musiikin hallinta</translation>
     </message>
     <message id="onyx-gesture-music-description">
-        <source>Swipe down with two fingers to play or pause music. Draw &lt; or &gt; on the screen for previous or next track.</source>
-        <translation>Pyyhkäise kahdella sormella alaspäin jatkaaksesi tai keskeyttääksesi musiikin kuuntelun. Piirrä nuoli &lt; vasemmalle tai oikealle &gt; vaihtaaksesi kappaletta.</translation>
+        <source>Swipe down with two fingers to play/pause music. Draw a &apos;&lt;&apos; or &apos;&gt;&apos; on the screen for previous or next track</source>
+        <translation>Pyyhkäise kahdella sormella alaspäin jatkaaksesi/keskeyttääksesi musiikin kuuntelun. Piirrä &apos;&lt;&apos; tai &apos;&gt;&apos; vaihtaaksesi kappaletta</translation>
     </message>
     <message id="onyx-gesture-camera">
-        <source>Camera</source>
-        <translation>Kamera</translation>
+        <source>Launch camera</source>
+        <translation>Käynnistä kamera</translation>
     </message>
     <message id="onyx-gesture-camera-description">
-        <source>Quickly start camera by drawing a circle on the screen.</source>
-        <translation>Käynnistä kamera piirtämällä ympyrä.</translation>
+        <source>Quickly start camera by drawing a circle on the screen</source>
+        <translation>Käynnistä kamera piirtämällä ympyrä</translation>
     </message>
     <message id="onyx-gesture-voicecall">
-        <source>Voicecall</source>
-        <translation>Puhelut</translation>
+        <source>Call history</source>
+        <translation>Puheluhistoria</translation>
     </message>
     <message id="onyx-gesture-voicecall-description">
-        <source>Go to call history list by drawing Λ on the screen.</source>
-        <translation>Piirrä ylöspäin osoittava nuoli Λ niin pääset nopeasti edellisten puheluiden luetteloon.</translation>
+        <source>Go to call history list by drawing a &apos;Λ&apos; on the screen</source>
+        <translation>Piirrä &apos;Λ&apos; päästäksesi nopeasti edellisten puheluiden luetteloon</translation>
     </message>
 </context>
 </TS>

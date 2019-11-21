@@ -16,17 +16,17 @@ Page {
         Column {
             id: col
             width: page.width
-            // Gesture settings
+            // Sleep mode gestures
             PageHeader {
-                //% "Gesture settings"
+                //% "Sleep mode gestures"
                 title: qsTrId("onyx-gesture-settings-title")
             }
 
-            // Double tap to wakeup
+            // Double tap to wake
             TextSwitch {
-                //% "Double tap to wakeup"
+                //% "Double tap to wake"
                 text: qsTrId("onyx-gesture-double-tap")
-                //% "Double tap on the screen to wakeup."
+                //% "Double tap on the screen to wake up from suspend"
                 description: qsTrId("onyx-gesture-double-tap-description")
                 checked: gestures.get("double_tap")
                 onCheckedChanged: gestures.set("double_tap", checked)
@@ -36,7 +36,7 @@ Page {
             TextSwitch {
                 //% "Flashlight toggle"
                 text: qsTrId("onyx-gesture-flashlight")
-                //% "Turn flashlight on/off by drawing V on the screen."
+                //% "Toggle flashlight on/off by drawing a 'V' on the screen"
                 description: qsTrId("onyx-gesture-flashlight-description")
                 checked: gestures.get("flashlight")
                 onCheckedChanged: gestures.set("flashlight", checked)
@@ -46,27 +46,27 @@ Page {
             TextSwitch {
                 //% "Music controls"
                 text: qsTrId("onyx-gesture-music")
-                //% "Swipe down with two fingers to play or pause music. Draw < or > on the screen for previous or next track."
+                //% "Swipe down with two fingers to play/pause music. Draw a '<' or '>' on the screen for previous or next track"
                 description: qsTrId("onyx-gesture-music-description")
                 checked: gestures.get("music")
                 onCheckedChanged: gestures.set("music", checked)
             }
 
-            // Camera
+            // Launch camera
             TextSwitch {
-                //% "Camera"
+                //% "Launch camera"
                 text: qsTrId("onyx-gesture-camera")
-                //% "Quickly start camera by drawing a circle on the screen."
+                //% "Quickly start camera by drawing a circle on the screen"
                 description: qsTrId("onyx-gesture-camera-description")
                 checked: gestures.get("camera")
                 onCheckedChanged: gestures.set("camera", checked)
             }
 
-            // Voicecall
+            // Call history
             TextSwitch {
-                //% "Voicecall"
+                //% "Call history"
                 text: qsTrId("onyx-gesture-voicecall")
-                //% "Go to call history list by drawing Λ on the screen."
+                //% "Go to call history list by drawing a 'Λ' on the screen"
                 description: qsTrId("onyx-gesture-voicecall-description")
                 checked: gestures.get("voicecall")
                 onCheckedChanged: gestures.set("voicecall", checked)
