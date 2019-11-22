@@ -74,25 +74,30 @@ Page {
         }
     }
 
+    // Wrapper for gesture-daemon's dconf values
     ConfigurationValue {
         id: gestures
         key: "/apps/onyxgestures/enabled-gestures"
         defaultValue: [ "double_tap" ]
 
-        function set(val, state) {
-            var i = value.indexOf(val)
-            var tmp = value
+        // Func: Set enabled state for a gesture
+        function set(gesture, isEnabled) {
+            var savedIndex = value.indexOf(gesture)
+            var enabledGestures = value
 
-            if (state && i === -1)
-                tmp.push(val)
-            else if (!state && i > -1)
-                tmp.splice(i, 1)
+            // Gesture just enabled & not in saved list => add it there
+            if (isEnabled && savedIndex === -1)
+                enabledGestures.push(gesture)
+            // Gesture just disabled & in saved list => remove it
+            else if (!isEnabled && savedIndex > -1)
+                enabledGestures.splice(savedIndex, 1)
 
-            value = tmp
+            value = enabledGestures
         }
 
-        function get(val) {
-            return (gestures.value.indexOf(val) > -1)
+        // Boolean: Get enabled state of a gesture
+        function get(gesture) {
+            return (value.indexOf(gesture) > -1) // gestures.value...
         }
     }
 }
