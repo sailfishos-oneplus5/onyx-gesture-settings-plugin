@@ -1,5 +1,9 @@
-# 
-# 
+#
+# gestured-settings-plugin RPM spec
+#
+# (C) kimmoli 2016
+# (C) Jami Kettunen 2019
+#
 
 Name:       onyx-gesture-settings-plugin
 
@@ -9,20 +13,21 @@ Name:       onyx-gesture-settings-plugin
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 
 Summary:    Onyx gesture settings plugin
-Version:    0.0.1
+Version:    0.1.0
 Release:    1
-Group:      System/Libraries
+Group:      System/System Control
 License:    LICENSE
-URL:        https://github.com/
+URL:        https://github.com/sailfishos-oneplus5/onyx-gesture-settings-plugin
 Source0:    %{name}-%{version}.tar.bz2
-Requires(post): /sbin/ldconfig
-Requires(postun): /sbin/ldconfig
-BuildRequires:  pkgconfig(Qt5Core)
-BuildRequires:  pkgconfig(Qt5Qml)
-BuildRequires:  pkgconfig(Qt5Quick)
-BuildRequires:  pkgconfig(Qt5DBus)
-BuildRequires:  mce-headers
-BuildRequires:  qt5-qttools-linguist
+
+Requires(post):    /sbin/ldconfig
+Requires(postun):  /sbin/ldconfig
+BuildRequires:     pkgconfig(Qt5Core)
+BuildRequires:     pkgconfig(Qt5Qml)
+BuildRequires:     pkgconfig(Qt5Quick)
+BuildRequires:     pkgconfig(Qt5DBus)
+BuildRequires:     qt5-qttools-linguist
+BuildRequires:     mce-headers
 
 %description
 %{summary}.
