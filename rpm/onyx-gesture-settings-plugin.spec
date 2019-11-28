@@ -30,7 +30,7 @@ BuildRequires:     qt5-qttools-linguist
 BuildRequires:     mce-headers
 
 %description
-%{summary}.
+Control enabled sleep mode gestures for gestured system daemon straight from your system settings.
 
 %prep
 %setup -q -n %{name}-%{version}

@@ -20,5 +20,5 @@ OTHER_FILES += \
     i18n/*.ts
 
 TRANSLATIONS += i18n/*.ts
-    
+
 INSTALLS = entries pages translations

@@ -1,9 +1,10 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="de" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
-    <name/>
+    <name></name>
     <message id="onyx-gesture-settings-title">
         <source>Gesture settings</source>
-        <extracomment>page header</extracomment>
         <translation>Gesten Einstellungen</translation>
     </message>
     <message id="onyx-gesture-double-tap">

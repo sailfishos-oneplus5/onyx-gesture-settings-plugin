@@ -84,7 +84,7 @@ Page {
     ConfigurationValue {
         id: gestures
         key: "/apps/onyxgestures/enabled-gestures"
-        defaultValue: [ "double_tap" ]
+        defaultValue: [ "double_tap", "voicecall", "camera", "music", "flashlight" ]
 
         // Func: Set enabled state for a gesture
         function set(gesture, isEnabled) {
@@ -103,7 +103,7 @@ Page {
 
         // Boolean: Get enabled state of a gesture
         function get(gesture) {
-            return (value.indexOf(gesture) > -1) // gestures.value...
+            return (value.indexOf(gesture) > -1)
         }
     }
 }

@@ -5,11 +5,11 @@
 #include <QTranslator>
 #include "settingsui.h"
 
+
 class Translator : public QTranslator
 {
 public:
-    Translator(QObject *parent)
-        : QTranslator(parent)
+    Translator(QObject *parent) : QTranslator(parent)
     {
         qApp->installTranslator(this);
     }
@@ -27,14 +27,6 @@ class Q_DECL_EXPORT OnyxGestureSettingsPlugin : public QQmlExtensionPlugin
     Q_PLUGIN_METADATA(IID "com.kimmoli.onyxgesturesettings")
 #endif
 public:
-    OnyxGestureSettingsPlugin()
-    {
-    }
-
-    virtual ~OnyxGestureSettingsPlugin()
-    {
-    }
-
     void registerTypes(const char *uri)
     {
         Q_ASSERT(uri == QLatin1String("com.kimmoli.onyxgesturesettings"));
@@ -56,6 +48,10 @@ public:
 
         QQmlExtensionPlugin::initializeEngine(engine, uri);
     }
+
+    OnyxGestureSettingsPlugin() {  }
+
+    virtual ~OnyxGestureSettingsPlugin() {  }
 };
 
 #include "plugin.moc"

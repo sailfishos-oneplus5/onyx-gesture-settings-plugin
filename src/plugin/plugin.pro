@@ -1,11 +1,12 @@
 TARGET = onyxgesturesettings
+
 PLUGIN_IMPORT_PATH = com/kimmoli/onyxgesturesettings
-QT += dbus
-QT -= gui
 
 TEMPLATE = lib
 CONFIG += qt plugin hide_symbols
-QT += qml quick
+
+QT += dbus qml quick
+QT -= gui
 
 INCLUDEPATH += ..
 LIBS += -L.. -lonyxgesturesettings-qt5

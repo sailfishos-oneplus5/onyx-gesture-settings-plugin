@@ -1,6 +1,8 @@
 TEMPLATE = lib
+
 TARGET = onyxgesturesettings-qt5
-CONFIG += qt hide_symbols 
+CONFIG += qt hide_symbols
+
 QT += dbus qml quick
 QT -= gui
 
